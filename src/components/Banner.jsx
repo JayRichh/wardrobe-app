@@ -13,12 +13,15 @@ const Banner = () => {
         </p>
         <div className="btn-container">
           <Button>Order Now</Button>
-          <a href="/menu" className="text-yellow-400 text-lg font-semibold text-decoration-lin px-3">
-            View Menu
+          <a
+            href="/store"
+            className="text-yellow-400 hover:text-yellow-500 font-bold text-decoration-line px-3"
+          >
+            Open Store
           </a>
         </div>
       </div>
-      <div className="banner-image w-full md:w-1/2 p-3">
+      <div className="banner-image w-full h-96 md:w-1/2 p-3">
         <img
           src={require("../assets/images/banner-img.jpg")}
           alt="banner"

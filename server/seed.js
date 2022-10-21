@@ -3,8 +3,7 @@ const MongoClient = require("mongodb").MongoClient;
 const _ = require("lodash");
 
 async function main() {
-  const uri =
-    "mongodb+srv://jsrich:Sp00kMyN00g!@cluster0.vhzrp69.mongodb.net/?retryWrites=true&w=majority";
+  const uri = "mongodb://localhost://27017";
   const client = new MongoClient(uri);
 
   try {
@@ -16,19 +15,9 @@ async function main() {
     const categoriesCollection = client
       .db("clothing-ordering")
       .collection("categories");
-    const sizesCollection = client
-      .db("clothing-ordering")
-      .collection("sizes");
+    const sizesCollection = client.db("clothing-ordering").collection("sizes");
 
-    let sizes = [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL",
-      "XXXL",
-    ].map((size) => {
+    let sizes = ["XS", "S", "M", "L", "XL", "XXL", "XXXL"].map((size) => {
       return { name: size };
     });
     await sizesCollection.insertMany(sizes);

@@ -1,8 +1,8 @@
+import { Alert } from "../../components/elements/Alert";
 const PaymentSuccess = () => {
-
   return (
-    <div>
-      <h1>PaymentSuccess</h1>
+    <div className="max-w-lg mx-auto p-4">
+      <Alert variant="success">Your payment was successful</Alert>
     </div>
   );
 };
