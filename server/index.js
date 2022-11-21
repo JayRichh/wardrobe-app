@@ -6,7 +6,10 @@ const db = require("./db");
 
 const app = express();
 const productRouter = require("./routes/productRouter");
-const userRouter = require("./routes/productRouter");
+const userRouter = require("./routes/userRouter");
+const wardrobeRouter = require("./routes/wardrobeRouter");
+const styleRouter = require("./routes/styleRouter");
+const stylerRouter = require("./routes/stylerRouter");
 
 const Order = require("./models/orderModel");
 
@@ -98,6 +101,9 @@ app.listen(PORT, () => {
 });
 app.use("/api/", productRouter);
 app.use("/api/", userRouter);
+app.use("/api/", wardrobeRouter);
+app.use("/api/", styleRouter);
+app.use("/api/", stylerRouter);
 
 app.post("/create-payment-intent", async (req, res) => {
   try {

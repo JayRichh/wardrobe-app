@@ -21,6 +21,7 @@ const Store = () => {
 
   const onAddProduct = (product) => {
     dispatch(addToCart(product));
+    console.log(product, "product added to cart");
   };
 
   const onTabSwitch = (newActiveTab) => {

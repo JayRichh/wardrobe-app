@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../../components/elements/Button";
+//eslint-disable-next-line
 import app from "../../firebase-config";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -71,7 +72,7 @@ const Register = () => {
       <div className="rounded-lg max-w-md w-full flex flex-col items-center justify-center relative">
         <div className="absolute inset-0 transition duration-300 animate-pink blur  gradient bg-gradient-to-tr from-rose-500 to-yellow-500"></div>
         <div className="p-10 rounded-xl z-10 w-full h-full bg-black">
-          <h5 className="text-3xl">Register</h5>
+          <h5 className="text-white text-3xl pb-4">Register</h5>
           <form className="w-full space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <div>
               <label
